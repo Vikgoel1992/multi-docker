@@ -9,15 +9,15 @@ script:
     - docker run -e CI=true vikas/react-test npm test 
 
 after_success:
-        - docker build -t vikas/multi-client ./client
-        - docker build -t vikas/multi-nginx ./nginx
-        - docker build -t vikas/multi-server ./server
-        - docker build -t vikas/multi-worker ./worker
+        - docker build -t vikgoel1992/multi-client ./client
+        - docker build -t vikgoel1992/multi-nginx ./nginx
+        - docker build -t vikgoel1992/multi-server ./server
+        - docker build -t vikgoel1992/multi-worker ./worker
         - echo "$Docker_Password" | docker login -u "$Docker_Id" --password-stdin       
-        - docker push vikas/multi-client
-        - docker push vikas/multi-nginx
-        - docker push vikas/multi-server
-        - docker push vikas/multi-worker
+        - docker push vikgoel1992/multi-client
+        - docker push vikgoel992/multi-nginx
+        - docker push vikgoel992/multi-server
+        - docker push vikgoel1992/multi-worker
 
 
 
