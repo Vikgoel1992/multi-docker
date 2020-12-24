@@ -9,12 +9,12 @@ script:
     - docker run -e CI=true vikas/react-test npm test 
 
 after_success:
-        - docker build -t vikas/mulit-client ./client
+        - docker build -t vikas/multi-client ./client
         - docker build -t vikas/multi-nginx ./nginx
         - docker build -t vikas/multi-server ./server
         - docker build -t vikas/multi-worker ./worker
         - echo "$Docker_Password" | docker login -u "$Docker_Id" --password-stdin       
-        - docker push vikas/mulit-client
+        - docker push vikas/multi-client
         - docker push vikas/multi-nginx
         - docker push vikas/multi-server
         - docker push vikas/multi-worker
