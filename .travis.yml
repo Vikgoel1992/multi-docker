@@ -15,8 +15,8 @@ after_success:
         - docker build -t vikgoel1992/multi-worker ./worker
         - echo "$Docker_Password" | docker login -u "$Docker_Id" --password-stdin       
         - docker push vikgoel1992/multi-client
-        - docker push vikgoel992/multi-nginx
-        - docker push vikgoel992/multi-server
+        - docker push vikgoel1992/multi-nginx
+        - docker push vikgoel1992/multi-server
         - docker push vikgoel1992/multi-worker
 
 
