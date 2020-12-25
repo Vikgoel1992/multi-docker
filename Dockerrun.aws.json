@@ -7,7 +7,8 @@
 		"name": "client",
 		"image": "vikgoel1992/multi-client",
 		"hostname": "client",
-		"essential": false
+		"essential": false,
+		"memory": 128
 	
 	
 	},
@@ -17,7 +18,8 @@
 		 "name": "worker",
                 "image": "vikgoel1992/multi-worker",
                 "hostname": "worker",
-                "essential": false
+                "essential": false,
+		"memory": 128
 
 
 	
@@ -27,7 +29,8 @@
 		"name": "server",
                 "image": "vikgoel1992/multi-worker",
                 "hostname": "api",
-                "essential": false
+                "essential": false,
+		"memory": 128
 
 	
 	
@@ -38,6 +41,7 @@
 		"image": "vikgoel1992/multi-nginx",
 		"hostname": "nginx",
 		"essential": true,
+		"memory": 128,
 		"portmappings":[
 			{
 				"hostport": 80,
